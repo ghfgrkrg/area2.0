@@ -1,0 +1,138 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>square</h1>
+            <input type="text" id="square" name="square"><br><br>
+            <button onclick="square ()">Try it</button>
+            <h3 id ="square_answer" style=color:green></h3>
+            <br><br>
+        <h1>triangle</h1>
+            <h3>hight</h3>
+            <input type="text" id="hight" name="triangle"><br><br>
+            <h3>base</h3>
+            <input type="text" id="base" name="triangle"><br><br>
+            <button onclick="triangle ()">Try it</button>
+            <h3 id ="triangle_answer" style=color:green></h3>
+            <br><br>
+        <h1>rectangle</h1>
+            <h3>hight</h3>
+            <input type="text" id="rectangle_hight" name="rectangle"><br><br>
+            <h3>base</h3>
+            <input type="text" id="rectangle_base" name="rectangle"><br><br>
+            <button onclick="rectangle ()">Try it</button>
+            <h3 id ="rectangle_answer" style=color:green></h3>
+            <br><br>
+        <h1>trapezoid</h1>
+            <h3>top length</h3>
+            <input type="text" id="top_length" name="trapezoid"><br><br>
+            <h3>bottom length</h3>
+            <input type="text" id="bottom_length" name="trapezoid"><br><br>
+            <h3>hight</h3>
+            <input type="text" id="trapezoid_hight" name="trapezoid"><br><br>
+            <button onclick=" trapezoid ()">Try it</button>
+            <h3 id ="trapezoid_answer" style=color:green></h3>
+            <br><br>
+        <h1>parallelogram</h1>
+            <h3>hight</h3>
+            <input type="text" id="parallelogram_hight" name="parallelogram"><br><br>
+            <h3>base</h3>
+            <input type="text" id="parallelogram_base" name="parallelogram"><br><br>
+            <button onclick=" parallelogram ()">Try it</button>
+            <h3 id ="parallelogram_answer" style=color:green></h3>
+            <br><br>
+        <h1>kite</h1>
+            <h3>diagonal_1</h3>
+            <input type="text" id="diagonal_1" name="diagonal_l"><br><br>
+            <h3>diagonal_2</h3>
+            <input type="text" id="diagonal_2" name="diagonal_2"><br><br>
+            <button onclick="kite ()">Tryit</button>
+            <h3 id ="kite_answer" style=color:green></h3>
+            <br><br>
+        <script>
+
+        function square () {
+            let square_answer=0
+        let one=document.getElementById("square").value
+        
+        square_answer=one*one
+            console.log(square_answer)
+            document.getElementById("square_answer").innerHTML = "square_answer:" + square_answer;
+        }
+
+        function triangle () {
+            let triangle_answer=0
+            let hight=document.getElementById("hight").value
+            let base=document.getElementById("base").value
+            if (hight == "" || base == "" ) {
+                alert("error")
+            } else {
+                triangle_answer=(1/2)*(hight*base)
+                console.log(triangle_answer)
+                document.getElementById("triangle_answer").innerHTML = "triangle_answer:" + triangle_answer;
+            }
+        
+
+            }
+
+        function rectangle () {
+            let rectangle_answer=0
+            let rectangle_hight=document.getElementById("rectangle_hight").value
+            let rectangle_base=document.getElementById("rectangle_base").value
+            if (rectangle_hight == "" || rectangle_base == "" ) {
+                alert("error")
+            } else {
+                rectangle_answer=rectangle_hight*rectangle_base
+                console.log(rectangle_answer)
+                document.getElementById("rectangle_answer").innerHTML = "rectangle_answer:" + rectangle_answer;
+            }
+
+
+
+        }
+
+        function trapezoid () {
+            let trapezoid=0
+            let trapezoid_answer=0
+            let toplength=document.getElementById("top_length").value
+            let bottomlength=document.getElementById("bottom_length").value
+            let trapezoid_hight=document.getElementById("trapezoid_hight").value
+            if (toplength==""||bottomlength=="") {
+                alert("error")
+            } else {
+                trapezoid=Number(toplength)+Number(bottomlength)
+                trapezoid_answer=(1/2)*(trapezoid_hight*trapezoid)
+                console.log(trapezoid_answer)
+                document.getElementById("trapezoid_answer").innerHTML = "trapezoid_answer:" + trapezoid_answer;
+            }
+        }
+        function parallelogram () {
+            let parallelogram_answer=0
+            let parallelogram_hight=document.getElementById("parallelogram_hight").value
+            let parallelogram_base=document.getElementById("parallelogram_base").value
+            if (parallelogram_base==""||parallelogram_hight==""){
+                alert(error)
+            }
+            else {
+                parallelogram_answer=parallelogram_base*parallelogram_hight
+                document.getElementById("parallelogram_answer").innerHTML = "parallelogram_answer:" + parallelogram_answer;
+            }
+        }
+        function kite () {
+            let kite_answer=0
+            let diagonal_1=document.getElementById("diagonal_1").value
+            let diagonal_2=document.getElementById("diagonal_2").value
+            if (diagonal_1==""||diagonal_2=="") {
+                alert(error)
+            } else {
+                kite_answer=(1/2)*(diagonal_1*diagonal_2)
+                document.getElementById("kite_answer").innerHTML = "kite_answer:" + kite_answer;
+            }
+
+
+        }
+        
+        </script>
+    </body>
+</html>
